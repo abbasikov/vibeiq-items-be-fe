@@ -1,0 +1,24 @@
+<div *ngIf="item" class="card container">
+  <h2>{{ item.name }}</h2>
+  <p>{{ item.description }}</p>
+
+  <h3>Images</h3>
+  <div class="images">
+    <div *ngFor="let img of item.images" class="image-box">
+      <img [src]="imageBaseUrl + img.url" alt="Item image" />
+      <button 
+        class="btn"
+        [disabled]="img.isPrimary" 
+        (click)="setPrimary(img.imageId)">
+        {{ img.isPrimary ? 'Primary' : 'Set as Primary' }} {{img.isPrimary}}
+      </button>
+    </div>
+  </div>
+
+  <hr style="margin: 24px 0;" />
+  <div class="form-group">
+    <label for="upload">Add New Image:</label>
+    <input id="upload" type="file" (change)="onImageSelected($event)" />
+  </div>
+</div>
+  

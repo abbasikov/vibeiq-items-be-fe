@@ -1,0 +1,23 @@
+<div class="container">
+    <!-- Create Button -->
+    <div class="header">
+      <button class="btn" routerLink="/create">+ Create New Item</button>
+    </div>
+  
+    <!-- Scrollable Item List -->
+    <div class="item-list">
+      <div 
+        *ngFor="let item of items" 
+        class="item-card" 
+        (click)="viewItem(item.id)"
+      >
+        <img 
+          [src]="getPrimaryImageUrl(item)" 
+          alt="{{ item.name }}"
+          class="item-image"
+        />
+        <div class="name">{{ item.name }}</div>
+      </div>
+    </div>
+  </div>
+  

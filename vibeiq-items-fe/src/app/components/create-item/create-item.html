@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>Create New Item</h2>
+  
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input 
+      id="name" 
+      type="text" 
+      [(ngModel)]="name" 
+      required
+      placeholder="Enter item name"
+    />
+  </div>
+  
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <textarea 
+      id="description" 
+      [(ngModel)]="description" 
+      placeholder="Enter item description"
+      rows="4"
+    ></textarea>
+  </div>
+  
+  <div class="actions">
+    <button class="btn cancel" routerLink="/">Cancel</button>
+    <button class="btn primary" (click)="createItem()">Create Item</button>
+  </div>
+</div>

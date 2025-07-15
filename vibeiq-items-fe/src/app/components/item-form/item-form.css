@@ -1,0 +1,93 @@
+.images {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .image-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image-box img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 4px;
+  }
+  
+  .image-box button {
+    margin-top: 6px;
+  }
+  
+  .image-box img[style*="border-color: red"] {
+    border-color: red;
+  }
+
+.form-card {
+  max-width: 420px;
+  margin: 32px auto;
+  padding: 32px 24px 24px 24px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.form-card h2 {
+  margin-bottom: 24px;
+  font-size: 1.6rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: #f7f9fb;
+}
+
+.form-group textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.error {
+  color: #d32f2f;
+  font-size: 0.92rem;
+  margin-top: 3px;
+}
+
+.submit-btn, .form-card button, .form-card .btn {
+  width: 100%;
+  padding: 12px 0;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+
+.submit-btn:disabled, .form-card button:disabled, .form-card .btn:disabled {
+  background: #b0b0b0;
+  cursor: not-allowed;
+}
+  
